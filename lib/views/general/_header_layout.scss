@@ -68,7 +68,6 @@
 
   .banner_site-title {
     @include grid-column(12);
-    width:50%;
     padding-top: 1.125em; //18px
     padding-bottom: 1.125em;
     @include respond-min( $main_menu-mobile_menu_cutoff ){
