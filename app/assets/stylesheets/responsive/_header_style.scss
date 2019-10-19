@@ -10,6 +10,9 @@
 }
 
 .banner_site-title {
+    @media( min-width: $main_menu-mobile_menu_cutoff ) {
+        width:50%;;
+    }
   text-align: left;
   h1 {
     font-size: 1em;
