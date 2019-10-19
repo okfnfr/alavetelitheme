@@ -4,12 +4,29 @@
 <div id="left_column_flip" class="left_column_flip">
 <h1 id="credits"><%= @title %> <a href="#credits">#</a> </h1>
 
-<p>Alaveteli, le logiciel derrière <%= site_name %>, est un projet de MySociety, une organisation britannique. <a href="https://www.mysociety.org">mySociety</a> construit des sites web permettant aux citoyens de demander des comptes aux administrations. Ce site est la déclinaison française d'Alaveteli.</p>
+<h2 id="alaveteli">Alaveteli <a href="#alaveteli">#</a> </h2>
+
+<p>Alaveteli, le logiciel derrière <%= site_name %>, est un projet de MySociety, une organisation britannique. <a href="https://www.mysociety.org">mySociety</a> développe des sites web à destination des citoyens et de la société civile. Alaveteli a été réalisé initialement pour la version britannique <a href="https://www.whatdotheyknow.com/" target="_blank">What dot they know</a>.</p>
+
+<h2 id="madada">Le site madada.fr <a href="#madada">#</a> </h2>
+
+<p>Ma Dada est la déclinaison française de What do they know. Elle a été réalisée par un groupe de bénévoles dont plusieurs membres de l'association Open Knowledge France. La première version du site a également bénéficiée des conseils de membres de <a href="https://transparencia.be/" target="_blank">Transparencia.be</a> la version belge, ainsi que des membres d'<a href="https://ouvre-boite.org/">Ouvre-Boite</a> une association dont l'objet est d'obtenir l'accès et la publication effective des documents administratifs, et plus particulièrement des données. Enfin, la traduction française a été réalisée de manière collaborative sur le site <a href="https://www.transifex.com/mysociety/alaveteli/translate/#fr_FR/" target="_blank">Transifex</a>.</p>
+
+
+<h2 id="autorités">Liste des autorités <a href="#autorités">#</a> </h2>
+
+<p>La liste des autorités a été compilée à partir de plusieurs source. Voir la <a href="https://github.com/okfnfr/dada-france-authorities" target="_blank"></a>page dédiée sur github pour plus d'information</p>
+
+<h2 id="logo">Logo et images <a href="#logo">#</a> </h2>
+
+<p>Logo : déclinaison de <a href="https://thenounproject.com/search/?q=horse&i=853134" target="_blank">Horse</a> réalisé par Nook Fulloption pour le Noun Project et disponible sous la licence CC-BY.</p>
+
+<p>Page d'accueil : <a href="https://commons.wikimedia.org/wiki/File:Louvre_Palace.jpg" target="_blank">Louvre Palace</a> disponible sur Wikimedia Commons sous la licence CC-BY-SA</p>
 
 <dl>
 <dt id="development">Développement <a href="#development">#</a></dt>
 <dd>
- Nos remerciements chaleureux vont aux nombreux <a href="https://github.com/mysociety/alaveteli/graphs/contributors">contributeurs d'Alaveteli</a>.</p>
+ <p>Nos remerciements chaleureux vont aux nombreux <a href="https://github.com/mysociety/alaveteli/graphs/contributors">contributeurs d'Alaveteli</a>.</p>
 </dd>
 
 <dt id="helpus">Comment aider ?<a href="#helpus">#</a></dt>
@@ -39,12 +56,12 @@ N'hésitez pas à <%= link_to 'nous contacter', help_contact_path %> pour toute 
   <dd>
     <p>Nous n'avons pas de gros budget marketing, et le bouche à oreille nous aide vraiment. Voici quelques suggestions d'actions pour nous aider :</p>
       <ul>
-        <li>Écrire un article de blog sur Madada, ou une demande intéressante que vous avez identifié,</li>
+        <li>Écrire un article de blog sur Ma Dada, ou une demande intéressante que vous avez identifié,</li>
         <li>Poster à propos de ce site et de ce qu'il permet de faire sur des forums que vous fréquentez,</li>
         <li>Parler de ce site à vos amis,</li>
         <li>Faire savoir au journal local ou au magazine de votre communauté à quel point ce site est utile,</li>
         <li>Prenez la parole pour présenter l'initiative (au travail, dans votre asso...),</li>
-        <li><%= mail_to 'contact@madada.fr', 'Demandez nous des flyers', :encode => "javascript" %> à déposer à la bibliothèque du coin ou votre café favori...</li>
+        <!--<li><%= mail_to 'contact@madada.fr', 'Demandez nous des flyers', :encode => "javascript" %> à déposer à la bibliothèque du coin ou votre café favori...</li>-->
       </ul>
   </dd>
 </dd>

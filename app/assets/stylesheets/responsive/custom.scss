@@ -299,9 +299,9 @@ a.link_button_green_large {
   float: left;
   margin-right: 1.5em;
   // Smaller logo on mobiles
-  width: ($logo-width / 2);
-  height: ($logo-height / 2);
-  background-size: ($logo-width / 2) ($logo-height / 2);
+  //width: ($logo-width / 2);
+  //height: ($logo-height / 2);
+  //background-size: ($logo-width / 2) ($logo-height / 2);
 
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     width: $logo-width;
