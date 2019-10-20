@@ -11,11 +11,14 @@
 
 .banner_site-title {
 
+    @media( max-width: $main_menu-mobile_menu_cutoff ) {
+      width: 100%;
+    }
+
   text-align: left;
   h1 {
     font-size: 1em;
     font-weight: none;
-
   }
   a {
     text-decoration: none;
