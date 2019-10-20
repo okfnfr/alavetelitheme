@@ -935,12 +935,12 @@ dt {
   }
   .new-request__make-new-requests {
     @include button-base;
-    background-color: desaturate(darken($color_secondary, 10%), 5%);
+    background-color: $color_secondary;
     color: $color_white;
     &:hover,
     &:active,
     &:focus {
-      background-color: darken($color_secondary, 20%);
+      background-color: darken($color_secondary, 10%);
     }
   }
 }
