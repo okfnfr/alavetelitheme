@@ -296,15 +296,10 @@ a.link_button_green_large {
 }
 
 .site-title__logo {
-  float: left;
-  margin-right: 1.5em;
-  @media( max-width: $main_menu-mobile_menu_cutoff ) {
-  margin-bottom: 1em;
-  }
-  // Smaller logo on mobiles
-  //width: ($logo-width / 2);
-  //height: ($logo-height / 2);
-  //background-size: ($logo-width / 2) ($logo-height / 2);
+  Smaller logo on mobiles
+  width: ($logo-width / 2);
+  height: ($logo-height / 2);
+  background-size: ($logo-width / 2) ($logo-height / 2);
 
   @include respond-min( $main_menu-mobile_menu_cutoff ){
     width: $logo-width;
