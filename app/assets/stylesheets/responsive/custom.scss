@@ -296,16 +296,9 @@ a.link_button_green_large {
 }
 
 .site-title__logo {
-  //Smaller logo on mobiles
-  width: ($logo-width / 2);
-  height: ($logo-height / 2);
-  background-size: ($logo-width / 2) ($logo-height / 2);
-
-  @include respond-min( $main_menu-mobile_menu_cutoff ){
     width: $logo-width;
     height: $logo-height;
     background-size: $logo-width $logo-height;
-  }
 }
 
 .navigation {
