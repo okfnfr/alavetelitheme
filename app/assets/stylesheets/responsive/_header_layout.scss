@@ -1,0 +1,429 @@
+/* Header layout */
+
+#banner_content{
+  @include grid-row;
+  position: relative;
+  @include ie8{
+    width: $main_menu-mobile_menu_cutoff;
+  }
+}
+
+#banner{
+  // Hide menu items by default on mobile
+  #logged_in_bar,
+  #topnav,
+  #user_locale_switcher,
+  #navigation_search{
+    display:none;
+  }
+
+  // …and show a button to reveal them
+  .rsp_menu_button{
+    padding: 1em 1em 0 1em;
+    position: absolute;
+    top: 0.66em;
+    right: 0.9375rem;
+    a {
+      text-align: right;
+      &.open{
+        display: block;
+      }
+      &.close{
+        display: none;
+      }
+    }
+  }
+
+  // Squeeze the logo up on small screens to make room for the button
+  #logo_wrapper{
+    @include grid-column(8);
+    padding: 1em 1em 0 1em;
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      @include grid-column(3);
+      padding: 1em;
+      margin-bottom: 1em;
+      @include lte-ie7 {
+        width: 17.313em;
+      }
+    }
+  }
+
+  &:target{
+    // Hide menu button when menu is open
+    .rsp_menu_button{
+      position: absolute;
+      top: 0.66em;
+      right: 0.9375rem;
+      a {
+        text-align: right;
+        &.open{
+          display: none;
+        }
+        &.close{
+          display: block;
+        }
+      }
+    }
+  }
+
+  .banner_site-title {
+    //@include grid-column(12);
+    padding-top: 1.125em; //18px
+    padding-bottom: 1.125em;
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      @include grid-column(4);
+    }
+    h1 {
+      margin: 0;
+    }
+  }
+
+  &:target{
+    // Hide menu button when menu is open
+    .rsp_menu_button{
+      .open{
+        display:none;
+      }
+      .close{
+        display:block;
+      }
+    }
+    @media( max-width: $main_menu-mobile_menu_cutoff ){
+      // Show menu items when menu is targeted
+      #logged_in_bar,
+      #topnav,
+      #user_locale_switcher,
+      #navigation_search{
+        display:block;
+        clear:both;
+      }
+    }
+  }
+
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    // On larger screens show the menu
+    #banner_nav,
+    #logged_in_bar,
+    #topnav,
+    #user_locale_switcher,
+    #navigation_search{
+      display:block;
+    }
+
+    // …and hide the menu button
+    .rsp_menu_button{
+      display:none;
+    }
+  }
+
+}
+
+.no-js #banner {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    #logged_in_bar {
+      margin-left: 50%;
+    }
+  }
+}
+
+.site-title__logo {
+  @include image-replacement;
+  width: $logo-width;
+  height: $logo-height;
+  background-size: $logo-width $logo-height;
+  background-image: image-url($logo-filename);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  display: block;
+}
+
+
+#topnav{
+  padding: 0  0 1em 0;
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    padding: 0;
+  }
+}
+
+.navigation {
+  list-style: none outside none;
+  @include grid-row;
+  padding: 0;
+  position: relative;
+
+  @include ie8{
+    width: $main_menu-mobile_menu_cutoff;
+  }
+
+  // Spread the nav elements horizontally on larger screens
+  li {
+    display: block;
+
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      display: inline-block;
+      float: left;
+    }
+
+    @include lte-ie7 {
+      display: inline;
+    }
+  }
+
+  a {
+    padding: 0.5em 1em;
+    display: block;
+
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      display: inline-block;
+    }
+  }
+}
+
+.logged_in_bar {
+  @include respond-min( $main_menu-mobile_menu_cutoff ) {
+    @include grid-column($columns:3);
+    padding-top: 1.8125em; //vertically centers it in the banner
+  }
+
+  .js-loaded & {
+    @include respond-min( $main_menu-mobile_menu_cutoff ) {
+      position: relative;
+    }
+  }
+}
+
+#navigation_search {
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    @include grid-column($columns:3);
+    padding-top: 1.8125em; //vertically centers it in the banner
+  }
+  form{
+    @include grid-row;
+    padding: 1em 1em 0 1em;
+    @include lte-ie7 {
+      display: inline;
+    }
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      padding: 0;
+ 
+    }
+  }
+  input{
+    @include grid-column($columns:10);
+    margin-right:0;
+    margin-bottom: 0;
+    @include lte-ie7 {
+      width: 10.063em;
+    }
+  }
+  button[type="submit"]{
+    @include prefix-postfix-base;
+    @include grid-column($columns:2,$float:right);
+    border:none;
+    @include lte-ie7 {
+      width: 2.125em;
+    }
+    @include respond-min( $main_menu-mobile_menu_cutoff ){
+      margin-bottom: 0;
+    }
+  }
+}
+
+.locale-list {
+  @include respond-min( $main_menu-mobile_menu_cutoff ) {
+    border: 0;
+    @include grid-column($columns:2);
+    padding-top: 1.5625em; //vertically centers it in the banner (based on having two languages)
+  }
+
+  a,
+  .locale-list-trigger {
+    display: block;
+    padding: 0.5em 1em;
+    @include respond-min( $main_menu-mobile_menu_cutoff ) {
+      display: inline-block;
+      padding: 0 0.35em;
+    }
+  }
+}
+
+.locale-list-trigger {
+  margin-bottom: 0;
+  @include respond-min( $main_menu-mobile_menu_cutoff ) {
+    display: inline;
+  }
+}
+
+.available-languages {
+  list-style: none outside none;
+  margin:0;
+  padding: 0;
+  li {
+    @include respond-min( $main_menu-mobile_menu_cutoff ) {
+      display: inline-block;
+    }
+  }
+}
+
+.sign_in_link {
+  display: block;
+  padding: 1em;
+  @include respond-min( $main_menu-mobile_menu_cutoff ) {
+    padding: 0.5em 1em;
+    text-align: right;
+  }
+}
+
+.js-loaded {
+  @include respond-min( $main_menu-mobile_menu_cutoff ) {
+    .logged-in-menu {
+      position: absolute;
+      right: 0.935em; //line up with grid boundaries
+      top: 4.3em; //flush with bottom of button
+      width: 275px;
+      background-color: white;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      padding: 1em;
+      z-index: 10;
+
+      a {
+        padding: 0;
+      }
+
+      li {
+        display: block;
+        float: none;
+      }
+    }
+
+    .logged-in-menu__signout-link {
+      border-top: 1px solid #CCC;
+      padding: 1em 0 0 0;
+      margin-top: 1em;
+      a {
+        padding: 0;
+      }
+    }
+
+    .logged-in-menu__links {
+      padding: 0;
+    }
+    .profile-summary {
+      border-bottom: 1px solid #CCC;
+      margin-bottom: 1em;
+    }
+
+    .profile-summary__name {
+      //stop long first names from breaking the layout
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 15em;
+      display: inline-block;
+      margin-bottom: -0.4em; // making this inline-block adds space below, this fixes that
+    }
+  }
+}
+
+.logged-in-menu li {
+  @include respond-min( $main_menu-mobile_menu_cutoff ) {
+    display: inline-block;
+  }
+}
+
+.logged-in-menu {
+  margin-bottom: 1em;
+  li a {
+    display: block;
+    padding: 0.5em 1em; //13px 16px
+  }
+  @include respond-min( $main_menu-mobile_menu_cutoff ){
+    color: black;
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1);
+    li a {
+      font-size: 1em;
+      padding: 0.5em 1em;
+    }
+  }
+}
+
+.logged-in-menu__links {
+  margin: 0;
+}
+
+.account-link {
+  position: relative;
+  
+  //stop long first names from breaking the layout
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  display: block;
+  padding: 0.5em 1em;
+
+  @include respond-min( $main_menu-mobile_menu_cutoff ) {
+    max-width: 15em;
+    text-align: right;
+  }
+
+  .js-loaded & {
+    @include respond-min( $main_menu-mobile_menu_cutoff ) {
+      text-align: right;
+    }
+    &:after {
+        display: block;
+        position: absolute;
+        content: '';
+        right: 27px;
+        top: 1.2em;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid rgba(0, 0, 0, 0.4);
+        @include respond-min( $main_menu-mobile_menu_cutoff ) {
+          right: 0;
+        }
+    }
+  }
+}
+
+.account-link--with-pro-pill {
+  padding-right: 3em;
+}
+
+.no-js {
+  .profile-summary {
+    display: none
+  }
+}
+
+.profile-summary {
+  display: none;
+  @include respond-min( $main_menu-mobile_menu_cutoff ) {
+    display: inherit;
+    padding-bottom: 1em;
+  }
+}
+
+.logged-in-menu__links {
+  padding: 0;
+}
+
+.js-loaded {
+  .logged-in-menu {
+    @include respond-min( $main_menu-mobile_menu_cutoff ) {
+      display: none;
+    }
+  }
+}
+
+
+.profile-summary__image {
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin-right: 1em;
+}

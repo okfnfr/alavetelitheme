@@ -296,9 +296,7 @@ a.link_button_green_large {
 }
 
 .site-title__logo {
-  float: left;
-  margin-right: 1.5em;
-  // Smaller logo on mobiles
+  Smaller logo on mobiles
   width: ($logo-width / 2);
   height: ($logo-height / 2);
   background-size: ($logo-width / 2) ($logo-height / 2);
