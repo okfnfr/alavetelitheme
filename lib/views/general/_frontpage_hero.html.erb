@@ -8,12 +8,12 @@
               "{{number_of_requests}} requests</a> to " \
               "<a href=\"{{authorities_url}}\">" \
               "{{number_of_authorities}} authorities</a>",
-            :requests_url => request_list_successful_path,
+            :requests_url => request_list_path,
             :number_of_requests => number_with_delimiter(@number_of_requests),
             :authorities_url => list_public_bodies_default_path,
             :number_of_authorities => number_with_delimiter(@number_of_authorities)) %>
       </p>
-      <a class="new-request__make-new-requests" href="/selectionner_autorite" style="float: right;">Faire une demande »</a>
+      <%= render :partial => "new_request" %>
     </div>
-  </div>  
+  </div>
 </div>
