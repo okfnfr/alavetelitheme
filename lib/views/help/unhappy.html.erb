@@ -1,116 +1,93 @@
-<% @title = "Unhappy about a Freedom of Information request?" %>
+<% @title = "Non satisfait.e de la réponse obtenue ?" %>
 
 
 <% if @info_request %>
-  <h1>Unhappy about the response you got
-    to your request '<%=request_link(@info_request) %>'?
+  <h1>Non satisfait.e de la réponse obtenue à '<%=request_link(@info_request) %>'?
   </h1>
 <% else %>
-  <h1>Unhappy about the response you got?</h1>
+  <h1>Non satisfait.e de la réponse obtenue ?</h1>
 <% end %>
 
-<p>If ...</p>
+<p>Si vous n'avez pas reçu de réponse dans les 30 jours vous pouvez : </p>
 
 <ul>
-  <li>You didn't get a reply within 20 working days</li>
-  <li>You did not get all of the information that you requested <strong>or</strong></li>
-  <li>Your request was refused, but without a reason valid under the law</li>
+  <li>saisir la Commission d'Accès aux Documents Administratifs (CADA) afin qu'elle remette un avis.</li>
 </ul>
 
-<p>... you can</p>
+<p>Si l'autorité a refusé la communication des documents demandés à plusieurs reprises, ou vous a communiqué une version incomplète des documents demandés, vous pouvez : </p>
 
 <ol>
-  <li>Ask for an <strong>internal review</strong> at the public authority.</li>
-  <li>If that doesn't help, complain to the <strong>Information Commissioner</strong>.</li>
-  <li>Either way, also <strong>use other means</strong> to answer your question.</li>
+  <li>demander une <strong><a href="#internal_review">reconsidération interne</a></strong> de la réponse apportée. </li>
+  <li>Si cela n'aide pas vous pouvez <a href="#complaining">saisir la <strong>CADA</strong></a></li>
+  <li><a href="https://madada.fr/selectionner_autorite" class="hover_a">faire une nouvelle requête</a> en demandant des informations plus spécifiques ou plus précises ou en l'adressant à une autorité différente</li>
+  <li>ou utiliser <a href="#other_means">d'autres moyens</a> pour formuler votre demande</li>
 </ol>
 
-<h1 id="internal_review">1. Asking for an internal review <a class="hover_a" href="#internal_review">#</a> </h1>
+<h1 id="internal_review">1. Demander une reconsidération <a class="hover_a" href="#internal_review">#</a> </h1>
 
 <p>
   <% if @info_request %>
-    <%= link_to "Request an internal review", new_request_followup_path(:request_id => @info_request.id) + "?internal_review=1#followup", :class => 'link_button_green request-internal-review-action' %> and then write a message asking the authority to review your request.
+    <%= link_to "Demander une reconsidération", new_request_followup_path(:request_id => @info_request.id) + "?internal_review=1#followup", :class => 'link_button_green request-internal-review-action' %> et écrire unmessage demandant à l'autorité de reconsidérer votre demande.
   <% else %>
-    At the bottom of the relevant request page on <%= site_name %> choose
-    "request an internal review". Then write a message asking for an internal
-    review of your request. You may want to include a link to the
-    request page, to make it clear which request you are talking about.
+  Au bas de la page de demande associée sur <%= site_name %> choisissez "demander une reconsidération". 
+  Ensuite écrivez un message demandant une reconsidération interne de la réponse négative qui vous a été adressée. 
+  Vous souhaiterez éventuellement inclure un lien vers la page de la demande, afin d'indiquer clairement la référence 
+  de la demande à laquelle vous faites référence.  
   <% end %>
 </p>
 
-<p>Internal reviews should be quick. If one takes longer than 20 working days
-  then the authority should write and let you know, and it should never take
-  longer than 40 working days (see this
-  <a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/foi_good_practice_guidance_5.pdf">good
-    practice guide</a>).
-  You will then either get the information that
-  you originally requested, or you will be told that the review upholds the
-  original decision.
+<p>Les procédures de reconsidération interne doivent être rapides. 
+Si cela prend plus de 20 jours ouvrés, l'autorité devrait alors vous en informer. 
+Dans tous les cas cela ne doit pas prendre plus de 40 jours ouvrés.
+Vous pourrez alors obtenir l'information que vous aviez demandé initialement, ou le refus d'accès vous sera confirmé. 
 </p>
 
-<h1 id="complaining">2. Complaining to the Information Commissioner <a class="hover_a" href="#complaining">#</a> </h1>
+<h1 id="complaining">2. Saisir la CADA <a class="hover_a" href="#complaining">#</a> </h1>
 
-<p>If you are still unhappy after the public authority has done their internal review,
-  then you can complain to the Information Commissioner. To do this read
-  <a href="http://www.ico.gov.uk/complaints/freedom_of_information.aspx">Complaints about Freedom of Information</a>
-  on the Information Commissioner's website. If you requested information from a Scottish
-  authority, then  <a href="http://www.itspublicknowledge.info/YourRights/HowToAppeal/Appeal.asp">appeal
-    to the Scottish Information Commissioner</a>.
+<p>Si vous êtes toujours mécontent.e après que l'autorité publique ait ré-examiné votre requête,
+  vous pouvez décider de saisir la Commission d'accès aux documents administratifs. Pour ce faire consulter la page de la FAQ dédiée à <a href="https://www.cada.fr/particulier/quand-et-comment-saisir-la-cada">cette procédure</a>
+  sur le site de la CADA.
 </p>
 
-<p>To make it easier to send the relevant information to the
-  Information Commissioner, either
+<p>Afin de simplifier l'envoi des informations appropriées à la CADA vous pouvez soit
   <% if @info_request %>
-    include a link to your request
+    inclure un lien vers votre demande
     <strong><%=h request_url(@info_request) %></strong>
   <% else %>
-    include a link to your request on <%= site_name %>
+    ou inclure un lien vers votre demande sur <%= site_name %>
 <% end %>
-in your complaint or print out the whole page of your request and all attachments.
+dans votre saisine.
 </p>
 
-<p><%= site_name %> has no special facilities for handling a request at this stage - it
-  passes into the Information Commissioner's system. You can leave annotations on your
-  request keeping people informed of progress.</p>
+<p><%= site_name %> n'a pas de fonctionnalité spéciale pour prendre en charge votre demander à ce stade - elle passe 
+dans le système de gestion de la CADA. Toutedfois vous pouvez laisser des commentaires dans la page de votre requête initiale afin 
+de tenir informé le public de l'avancement de votre démarche.</p>
 
-<p>A warning. There is a backlog of work at the Information Commissioner, and
-  it can take literally years to get resolution from them. If you reach this point,
-  you should accept that you won't get the information quickly by this means. Maybe
-  you want to help the fight to improve Freedom of Information, or maybe
-  getting the information slowly is still worthwhile. You can also try and
-  get the information by <strong>other means...</strong></p>
+<p>Une remarque. Bien que la CADA soit tenue de répondre dans des délais réglementaires (2 mois), actuellement cela peut prendre jusqu'à 6 mois avant 
+d'obtenir une réponse. Parallèlement vous pouvez essayer d'obtenir l'information par <strong>d'autres moyens</strong></p>
 
-<h1 id="other_means">3. Using other means to answer your question <a class="hover_a" href="#other_means">#</a> </h1>
+<h1 id="other_means">3. Utiliser d'autres moyens pour poser votre question <a class="hover_a" href="#other_means">#</a> </h1>
 
-<p>You can try persuing your problem or your research in other ways.</p>
+<p>Vous pouvez essayer de poursuivre votre demande d'accès ou votre recherche par d'autres moyens. </p>
 
 <ul>
-  <li>Make a <strong>new FOI request</strong> for summary information, or for
-    documentation relating indirectly to matters in your refused request.
-    <a href="<%= help_contact_path %>">Ask us for ideas</a> if you're stuck.</li>
-  <li>If any <strong>other public authorities</strong> or publicly owned companies are involved,
-    then make FOI requests to them.</li>
-  <li>Write to <strong>your MP</strong> or other politician using <a
-       href="http://www.writetothem.com">WriteToThem</a> and ask for their help
-     finding the answer. MPs can write directly to ministers or departments, and
-     can ask written questions in the House of Commons. Councillors in local authorities
-     can talk directly to council officers.</li>
-  <% if can_ask_the_eu?(@country_code) %>
-    <li>
-      Try <%= link_to 'asking for the information from the European Union',
-      'http://www.asktheeu.org' %>. Every one of the 500 million people
-      living in the European Union (both citizens and residents) has the
-      legally guaranteed right to ask for information from EU authorities.
-      <%= link_to 'Ask The EU', 'http://www.asktheeu.org' %> is a version of
-      this website for the European Union.
-    </li>
-  <% end %>
-  <li>Ask <strong>other researchers</strong> who are interested in a similar
-    issue to yours for ideas. You can sometimes find them by browsing this site;
-    contact any registered user from their page. There may be an Internet
-    forum or group that they hang out in. If it is a local matter, use <a
-       href="http://www.groupsnearyou.com">GroupsNearYou</a> to find such a
-     forum.</li>
-  <li>You could form a small local campaign group and arrange a meeting
-    with staff from the authority.</li>
+  <li>Faire une autre demande d'accès à l'information sous une forme résumée, 
+  ou pour de la documentation reliée indirectement à votre demande initiale. 
+  Demandez nous des idées si vous êtes bloqué.</li>
+
+  <li>Si n'importe qu'elle autorité publique ou agence exerçant une mission de service public est impliquée, 
+  formulez des demandes d'accès auprès d'elles.</li>
+
+  <li>Écrivez à votre député ou tout autre politicien et demandez leur de vous aidez à obtenir une réponse. 
+  Les députés peuvent être directement aux ministres ou directions et peuvent poser des question à l'assemblée. 
+  Les conseilleurs départementaux, régionaux ou municipaux puvent parler directement aux présidents de leurs assemblées locales.</li>
+
+  <li>Essayez de demander l'information en passant par l'Union européenne. 
+  Chacun des  500 million de personne viviant dans l'Union européenne (à la fois les citoyens et les résidents) a le droit juridiquement garanti de demander des informations aux autorités européennes. 
+  <a href="https://www.asktheue.org" target="_blank" class="hover_a">AskTheUE.org</a> est une version de ce site dédiée à l'Union européenne.</li>
+  
+  <li>Demandez à d'autres dadaïstes qui sont intéressés à des thèmes identiques ou similaires des idées. 
+  Vous pouvez parfois les trouver en navigant dans les demandes existantes ; 
+  contactez n'importe quel utilisateur enregistré depuis leur page de profil. 
+  Ils vous dirigeront peut-être vers un forum Internet où ils partagent des idées. </li>
 </ul>
