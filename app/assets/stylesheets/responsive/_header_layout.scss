@@ -209,6 +209,7 @@
     }
   }
   input{
+    color: $color_black;
     @include grid-column($columns:10);
     margin-right:0;
     margin-bottom: 0;
