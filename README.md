@@ -30,7 +30,7 @@ Ci-dessous on partage les trucs et astuces pour s'y retrouver dans le code et le
 
 - Enfin, certains éléments généraux comme le nom du site sont définis dans le répertoire `okfnfr/dada-core`
 
-- Pour savoir où est modifier un contenu texte :
+- Pour savoir où modifier un contenu texte :
 	1. Faire une recherche de la traduction dans transifex `translation_text:texte`
 	2. Faire une recherche dans les répertoires`okfnfr/data-france-theme`, `okfnfr/alaveteli` et `okfnfr/dada-core`. Pour ce faire, le mieux est d'avoir une copie du répertoire en local et d'utiliser un logiciel comme Sublime qui permet la recherche textuelle dans tout un dossier `Ctrl+Shift+F`
 
