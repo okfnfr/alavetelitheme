@@ -1,0 +1,71 @@
+<% @title = "Modèles de demandes de documents" %>
+
+<%= render :partial => 'sidebar' %>
+
+<div id="left_column_flip" class="left_column_flip">
+  <h1><%=@title %></h1>
+  <dl>
+    <dt>Introduction</dt>
+    <dd>
+      <p>Cette page fournit des modèles de courrier de demandes de documents administratifs afin de vous aider dans 
+      vos démarches individuelles : 
+        <ul>
+            <li>modèle de demande de la <a href="#modele-subvention">liste des subventions</a>.</li>
+            <li>modèle de demande du <a href="#modele-ca">compte administratif</a> (budget définitif)</li>
+        </ul>
+      </p>
+
+      <p> <%= site_name %> fournit un ensemble de formulaires et de fonctionnalités afin de vous faciliter la démarche de demande de documents administratifs.
+      Dans le formulaire principal de création d'une nouvelle demande, les éléments généraux de la demande sont pré-définis. 
+      Il vous reste "seulement" à préciser l'objet de votre demande.</br>
+        Cette partie pouvant être intimidante, nous avons regroupé sur cette page quelques formules de demande de documents administratifs couramment recherchés.
+      </p>
+    </dd>
+    <dt id="modele-subvention">Modèle de demande de la liste des subventions octroyées</dt>
+    <dd>
+      <p>Les autorités administratives disposent de règlements d'interventions visant à soutenir l'action des acteurs associatifs sur leur territoire.
+      Chacun de ces règlements d'intervention définit les axes d'intervention (sport, culture, action sociale, etc...) et les critères d'éligibilité.
+      
+      Afin de standardiser la publication de ces informations sur les portails de données ouvertes (open data), 
+      l'association Open Data France a proposé un schéma détaillant les champs attendus et leur formalisme.
+      Votre demande de communication peut donc être formulée ainsi : 
+
+      Le fichier mis à disposition en réponse à votre demande devrait donc contenir les informations suivantes : 
+      
+        <ul>
+          <li> <strong>nomAttribuant</strong> - Nom officiel de la collectivité attribuant la subvention.</li>
+          <li> <strong>idAttribuant</strong> - Code SIRET de la collectivité</li>
+          <li> <strong>dateConvention</strong> - Date de la convention de subvention. </li>
+          <li> <strong>referenceDecision</strong> - Identifiant interne de l’acte matérialisant la décision d’attribution de la subvention.</li>
+          <li> <strong>nomBeneficiaire</strong> -  Nom officiel ou raison sociale du bénéficiaire de la subvention.</li>
+          <li> <strong>idBeneficiaire</strong> - Code SIRET de l'association bénéficiare.</li>
+          <li> <strong>objet</strong> - Objet de la subvention.</li>
+          <li> <strong>montant</strong> - Montant total de la subvention attribuée, exprimé en euros et calculé avant répartition entre les bénéficiaires dans le cas de bénéficaires multiples.</li>
+          <li> <strong>nature</strong> - Nature de la subvention (aide en nature, aide en numéraire ou les deux).</li>
+          <li> <strong>conditionsVersement</strong> - Conditions de versement de la subvention. Choix unique parmi plusieurs valeurs possibles : 'unique', 'échelonné' ou 'autre'.</li>
+          <li> <strong>datesPeriodeVersement</strong> - Date ou période de versement.</li>
+          <li> <strong>idRAE</strong> - Identifiant RAE de l’aide au titre de laquelle la subvention est attribuée</li>
+          <li> <strong>notificationUE</strong> - Aide d'Etat notifiée à la Commission Européenne (oui ou non)</li>
+          <li> <strong>pourcentageSubvention</strong> - Pourcentage du montant total de la subvention attribuée au bénéficiaire (dans le cas de bénéficiaires multiples)</li>
+          </ul>
+    </p>
+    </dd>
+
+    <dt id="modele-ca">Modèle de demande du compte administratif</dt>
+    <dd>
+      <p>Les autorités administratives ont l'obligation de faire voter en séance publique les différentes étapes de leur politique budgétaire.
+      Lors de la première étape elles annoncent leur prévision de recette et de dépense (budget prévisionnel), puis disposent d'une ou deux "décision modificative" au cours desquels elles peuvent modifier les sommes affectées aux différentes sections de leur budget.
+      En fin d'année (ou plus généralement en début d'année suivante), l'étape des comptes administratifs constitue un bilan des sommes effectivement reçues ou dépensées. Les collectvités locales ont l'obligation de présenter un budget en équilibre (dépense = recette) qui est ensuite contrôlé par l'Etat.
+      L'ensemble des collectvités locales ayant procédé à la dématérialisation de la transmission de leurs étapes budgétaires ou ministères des finances utilisent un schéma de données structurant les "Actes budgétaires" généralement connu sous le nom  de schéma TOTEM.
+      Ce document numérique au format XML contient l'ensemble des informations budgétaires mais également, dans ses annexes, la liste et le montant des subventions octroyées, les informations relatives à l'endettement des autorités administratives le cas échéant ainsi que les informations relatives à la masse salariale composant l'effectif de l'autorité adiministrative.
+      Ce document est donc une mine d'informations pour les citoyen.nes et les associations qui s'intéressent à la transparence de la vie publique.
+      </p>
+      <p>Votre demande de communication administrative peut donc être libellée comme suit : 
+      
+      <\br>
+      <p>En application de la loi n° 78-575 du 17 juillet 1978 relative aux documents administratifs, je souhaite recevoir communication du compte administratif du budget principal de l'année XXXX et de ses annexes.
+      <\br>Je souhaite recevoir ces documents au format XML TOTEM.
+</p>
+    </dd>
+  <div id="hash_link_padding"></div>
+</div>
