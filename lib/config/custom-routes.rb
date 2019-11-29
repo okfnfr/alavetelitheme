@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   # brand new controller example
   # get '/mycontroller' => 'general#mycontroller'
   # Additional help page example
-  get '/help/cada' => 'help#cada'
-  get '/help/model' => 'help#model'
+  get '/aide/cada' => 'aide#cada'
+  get '/aide/model' => 'aide#model'
 end
