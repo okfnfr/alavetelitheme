@@ -8,7 +8,7 @@
               "{{number_of_requests}} requests</a> to " \
               "<a href=\"{{authorities_url}}\">" \
               "{{number_of_authorities}} authorities</a>",
-            :requests_url => request_list_all_path,
+            :requests_url => "https://madada.fr/demandes/toutes?#results",
             :number_of_requests => number_with_delimiter(@number_of_requests),
             :authorities_url => list_public_bodies_default_path,
             :number_of_authorities => number_with_delimiter(@number_of_authorities)) %>
