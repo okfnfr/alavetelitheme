@@ -1,0 +1,87 @@
+<% @title = "Que faire si ma demande est refusée ?" %>
+
+<%= render :partial => 'sidebar' %>
+
+<div id="left_column_flip" class="left_column_flip">
+    <h1 id="cada"><%= @title %> <a href="#cada">#</a> </h1>
+        <dl>
+            <dt id="top">Que faire si je n'ai pas de réponse au bout d'un mois ?</dt>
+            <dd>
+            <p>Lorsqu'une autorité refuse la communication du document ou de la donnée administrative dont vous avez fait la demande au bout d'un mois ( de manière implicite ou explicite), vous avec la possibilité : 
+            <ul>
+                <li>d'effectuer un <a href="#recours">recours</a> auprès de l'autorité saisie.</li>
+                <li>de <a href="#cada">saisir</a> la commission d'accès aux documents administratifs (CADA) afin qu'elle s'exprime sur ce refus.</li>
+            </ul>
+            </p>
+            <p>Les deux procédures ne peuvent pas être effectuées en parallèle. 
+            Soit vous privilégiez la diplomatie et vous choisissez de saisir à nouveau l'autorité administrative afin qu'elle reconsidère son refus, 
+            soit vous saisissez la CADA afin de vous appuyer sur son avis officiel.</p>
+            </dd>
+            
+            <dt id="recours">Comment effectuer une demande de recours ?</dt>
+            <dd>
+            <p>Il est possible (mais facultatif) de déposer un recours gracieux ou un recours hiérarchique afin de réexaminer la demande. (livre IV du CRPA)</p>
+
+            <p>Ce recours est susceptible de faire aboutir la demande plus vite qu'en passant par la CADA. 
+            Dans le cas contraire, cela permet de ne pas froisser l'administration mise en cause. 
+            En revanche, l'administration dispose d'un délai de 2 mois pour répondre, ce qui peut rallonger d'autant la démarche de libération. 
+            Silence gardé au bout des 2 mois vaut refus.
+            </p>
+            <p>Pendant toute sa durée, le recours administratif suspend le cours du délai de 2 mois pour saisir la CADA. 
+            </p>
+            <p>Pour effectuer votre demande de recours auprès de l'autorité publique auprès de laquelle vous avez effectué votre demande initiale c'est simple. Un bouton "action" est disponible en haut de la page détaillant les caractéristiques de votre demande et vous pouvez cliquer sur le lien "demande de reconsidération" qui vous enverra vers un formulaire dans lequel vous pourrez écrire votre courrier à l'autorité concernée.</p>
+            <div class="image-reconsideration"></div>
+            </dd>
+            
+            <dt id="cada">Comment effectuer une demande d'avis (saisine) de la CADA ?</dt>            
+            <p>La saisie de la CADA est très simple (et gratuite).</p>
+            <p>Il suffit de respecter un calendrier : la CADA doit en principe être sollicitée dans un délai de deux mois « à compter de la notification du refus ou de l’intervention du refus tacite [de l’administration] », explique l’institution.
+            Votre requête peut être transmise par courrier, par email (à cada [at] cada.fr, avec en objet « Demande d’avis »), au travers d'un formulaire en ligne, ou même par fax (01 42 75 80 70).
+            </p>
+            
+  
+  <dt id="top">Comment écrire à la CADA ?</dt>
+
+    <dd>
+    <p>Actuellement <%= site_name %> ne permet pas à ses utilisateurs de faire des saisines auprès de la CADA.</p>
+    <p>Afin de permettre aux autres de suivre votre démarche et d'informer l'autorité saisie initialement de votre démarche, nous
+    vous proposons la démarche suivante : 
+    <ol>
+        <li>envoyer un email à la CADA en utilisant ce <a href="#modele-lettre-cada">modèle</a></li>
+        <li>préciser dans votre email le lien vers la page détaillant votre demande initiale</li>
+        <li>télécharger l'historique de vos échanges (bouton action sur la page de votre demande) avec l'autorité et l'ajouter comme pièce jointe à votre email</li>
+        <li>utiliser l'action "Envoyer un message de suivi" sur la page de votre demande (bouton action) à l'autorité administrative saisie pour l'informer de votre démarche</li>
+    </ol>     
+      
+    </dd>
+
+    <dt>Et si je parviens toujours pas à obtenir satisfaction ?</dt>
+    <dd>
+    <p>Une fois l’avis de la CADA rendu, deux cas de figure. Soit l’institution émet un avis défavorable, auquel cas elle donne raison à l’administration. Soit elle rend un avis favorable, ce qui signifie que l’administration sera invitée à vous communiquer le document sollicité dans les plus brefs délais.
+    
+    Mais attention : les avis de la CADA ne sont pas contraignants. Autrement dit, rien n’oblige les acteurs publics à se plier aux délibérations de la commission...
+    
+    Si vous n’êtes pas satisfait de l’avis de la Commission ou que vous ne voyez toujours pas venir un document sur lequel la CADA a pourtant émis un avis favorable, il ne vous reste plus qu’une seule option : vous tourner devant le juge administratif.
+    </p>
+    <p>Merci à Xavier Berne et à l'équipe d'<a href="https://ouvre-boite.org/" target="_new">ouvre-boîte</a> pour le partage des informations reprises ici et mises à disposition <a target="_new" href="https://www.nextinpact.com/news/105587-comment-faire-demande-cada-dacces-aux-documents-administratifs.htm">ici</a> et <a href="https://wiki.ouvre-boite.org/index.php?title=Processus_de_demande#R.C3.A9ponse_de_l.27administration" target="_new">ici</a>.
+    </dd>
+    
+    <dt id="modele-lettre-cada">Modèle de lettre à la CADA </dt>
+
+    <dd>
+    <p>« Monsieur le Président,</br>
+J'ai l'honneur de saisir votre Commission d'une demande d'avis sur le refus opposé par [telle administration] à ma demande de communication du document suivant :</br>
+[indiquer le document sollicité, ou énumérer les différents documents, si vous en souhaitiez plusieurs]</br>
+Vous trouverez, joint au présent courrier :
+<ul>
+<li>La copie de ma demande de communication de document.</li>
+<li>Le refus qui m'a été opposé par [Monsieur X], le [date]. (cette mention n’est bien entendu à intégrer que si vous avez eu un retour négatif)</li>
+</ul>
+Dans l'attente de l'avis de votre Commission, je vous prie de croire, Monsieur le Président, à l'assurance de ma considération distinguée. »
+</p>
+<p>La CADA recommande de « rappeler, brièvement, le contexte dans lequel s’inscrivent la demande et la nature des documents demandés ». Mais cela n’est pas obligatoire.</br>
+Il est en revanche indispensable de mentionner ses nom et prénom, ainsi que ses coordonnées (adresse postale). Il ne faut enfin pas oublier de joindre une copie de la demande initiale de document, ainsi que celle du refus exprès de l’administration – si vous avez eu un retour formel, par courrier ou email.</p>
+    </dd>
+      
+    <div id="hash_link_padding"></div>
+</div>

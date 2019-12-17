@@ -778,6 +778,16 @@ dt {
   }
 }
 
+.image-reconsideration
+{
+  background-image:image-url('demandeReconsideration.png');
+  display: block;
+  height: 600px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* Front page */
 /* Drop the extract indentation on small screens */
 #frontpage_examples {
