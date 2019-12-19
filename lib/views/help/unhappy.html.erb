@@ -17,26 +17,26 @@
 <p>Si l'autorité a refusé la communication des documents demandés à plusieurs reprises, ou vous a communiqué une version incomplète des documents demandés, vous pouvez : </p>
 
 <ol>
-  <li>demander une <strong><a href="#internal_review">reconsidération interne</a></strong> de la réponse apportée. </li>
+  <li>Effectuer un <strong><a href="#internal_review">recours</a></strong>auprès de l'autorité concernée. </li>
   <li>Si cela n'aide pas vous pouvez <a href="#complaining">saisir la <strong>CADA</strong></a></li>
   <li><a href="https://madada.fr/selectionner_autorite" class="hover_a">faire une nouvelle requête</a> en demandant des informations plus spécifiques ou plus précises ou en l'adressant à une autorité différente</li>
   <li>ou utiliser <a href="#other_means">d'autres moyens</a> pour formuler votre demande</li>
 </ol>
 
-<h1 id="internal_review">1. Demander une reconsidération <a class="hover_a" href="#internal_review">#</a> </h1>
+<h1 id="internal_review">1. Effectuer un recours <a class="hover_a" href="#internal_review">#</a> </h1>
 
 <p>
   <% if @info_request %>
-    <%= link_to "Demander une reconsidération", new_request_followup_path(:request_id => @info_request.id) + "?internal_review=1#followup", :class => 'link_button_green request-internal-review-action' %> et écrire unmessage demandant à l'autorité de reconsidérer votre demande.
+    <%= link_to "Effectuer un recours", new_request_followup_path(:request_id => @info_request.id) + "?internal_review=1#followup", :class => 'link_button_green request-internal-review-action' %> et écrire un message demandant à l'autorité de reconsidérer sa réponse à votre demande.
   <% else %>
-  Au bas de la page de demande associée sur <%= site_name %> choisissez "demander une reconsidération". 
+  Au bas de la page de demande associée sur <%= site_name %> choisissez "demander un recours". 
   Ensuite écrivez un message demandant une reconsidération interne de la réponse négative qui vous a été adressée. 
   Vous souhaiterez éventuellement inclure un lien vers la page de la demande, afin d'indiquer clairement la référence 
   de la demande à laquelle vous faites référence.  
   <% end %>
 </p>
 
-<p>Les procédures de reconsidération interne doivent être rapides. 
+<p>Les procédures de recours interne doivent être rapides. 
 Si cela prend plus de 20 jours ouvrés, l'autorité devrait alors vous en informer. 
 Dans tous les cas cela ne doit pas prendre plus de 40 jours ouvrés.
 Vous pourrez alors obtenir l'information que vous aviez demandé initialement, ou le refus d'accès vous sera confirmé. 
@@ -45,7 +45,7 @@ Vous pourrez alors obtenir l'information que vous aviez demandé initialement, o
 <h1 id="complaining">2. Saisir la CADA <a class="hover_a" href="#complaining">#</a> </h1>
 
 <p>Si vous êtes toujours mécontent.e après que l'autorité publique ait ré-examiné votre requête,
-  vous pouvez décider de saisir la Commission d'accès aux documents administratifs. Pour ce faire consulter la page de la FAQ dédiée à <a href="https://www.cada.fr/particulier/quand-et-comment-saisir-la-cada">cette procédure</a>
+  vous pouvez décider de saisir la Commission d'accès aux documents administratifs. Pour ce faire consulter la page de la FAQ dédiée à <a href="https://dada.fr/aide/cada">cette procédure</a>
   sur le site de la CADA.
 </p>
 
