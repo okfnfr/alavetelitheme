@@ -47,9 +47,6 @@
                      anchor: 'internal_review',
                      url_title: @info_request.url_title)) %>
       </p>
-      <%= render partial: 'choose_recipient',
-                    locals: { incoming_message: incoming_message,
-                              name_for_followup: name_for_followup } %>
     <% end %>
 
     <% if incoming_message &&
