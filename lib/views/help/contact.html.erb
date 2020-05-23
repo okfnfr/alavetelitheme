@@ -87,6 +87,9 @@
     de ce site ou à propos de questions générales sur l’accès aux informations publiques.
   </p>
 
+  <% if @recaptcha_required %>
+    <%= recaptcha_tags %><br />
+  <% end %>
 
   <div class="form_button">
     <%= hidden_field_tag(:submitted_contact_form, 1) %>
