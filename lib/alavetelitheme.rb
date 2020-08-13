@@ -70,6 +70,7 @@ end
 # it isn't found, look in the Alaveteli locale directory next:
 repos = [
   FastGettext::TranslationRepository.build('app', :path=>File.join(File.dirname(__FILE__), '..', 'locale-theme'), :type => :po),
+  FastGettext::TranslationRepository.build('app', :path=>'locale_alaveteli_pro', :type => :po),
   FastGettext::TranslationRepository.build('app', :path=>'locale', :type => :po)
 ]
 FastGettext.add_text_domain 'app', :type=>:chain, :chain=>repos
