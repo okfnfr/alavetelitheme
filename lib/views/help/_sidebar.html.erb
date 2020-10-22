@@ -7,6 +7,9 @@
   <li><%= link_to_unless_current "Modèles de demandes", help_templates_path %></li>
   <li><%= link_to_unless_current "Politique de confidentialité", help_privacy_path %></li>
   <li><%= link_to_unless_current "FAQ pour les administrations", help_officers_path %></li>
+  <% if feature_enabled?(:alaveteli_pro) %>
+    <li><%= link_to_unless_current "Fonctions avancées", help_pro_path %></li>
+  <% end %>
   <li><%= link_to_unless_current "A propos du logiciel", help_alaveteli_path %></li>
   <li><%= link_to_unless_current "Crédits", help_credits_path %></li>
   <li><%= link_to_unless_current "Développeurs API", help_api_path %></li>
