@@ -18,178 +18,162 @@
   </h2>
 
   <p>
-    Pro users can set a privacy period on a request to delay publication while
-    you work on your story or investigation.
+    Les utilisateur.rice.s de Madada ++ peuvent définir une période de confidentialité sur leurs requêtes avant de les rendre publique pendant le temps de leurs investigations.
   </p>
 
   <p>
-    When a request is private we guarantee that it will only be visible on
-    <%= AlaveteliConfiguration.site_name %> for the period you select.
-    <%= AlaveteliConfiguration.pro_site_name %> administrators will also be able
-    to view your request, but will only do so in the event that they need to fix
-    a problem with it (e.g. failed delivery to the authority). They will not
-    reveal the contents of your request or any response you get to anyone else.
-    The authority may still publish it in a disclosure log as usual.
+    Lorsqu'une requête est privée nous garantissons qu'elle ne sera visible sur 
+    <%= AlaveteliConfiguration.site_name %> qu'à l'issue de la période de confidentialité définie.
+    Les administrateurs de <%= AlaveteliConfiguration.pro_site_name %> verront vos requêtes, mais seulement dans le cas où leur intervention serait nécessaire pour résoudre un problème
+     (par exemple dans le cas où une demande n'aurait pas été délivrée auprès de l'autorité destinataire). Ils ne révèleront en aucun cas le contenu de votre requête ni le contenu des échanges éventuels avec les destinataires de vos requêtes.
+    L'autorité saisie peut toutefois la rendre publique de sa propre initiative.
   </p>
 
   <h3 id="how-long-can-i-keep-requests-private">
-    How long can I keep requests private?
+    Combien de temps puis-je conserver ma requête privée?
    <a href="#how-long-can-i-keep-requests-private">#</a>
   </h3>
 
   <p>
-    Privacy periods can be set for 3, 6 and 12 month periods.
+    Les périodes de retention de publicité peuvent être définies pour des périodes de 3, 6 ou 12 mois.
   </p>
 
   <p>
     <%= image_tag 'alaveteli-pro/screenshot-embargo.jpg',
-                  alt: 'Adding a privacy period' %>
+                  alt: 'Ajouter une période de rétention de publicité' %>
   </p>
 
   <p>
-    You will be automatically notified a week before the privacy period expires,
-    and on the date of expiry.
+    Vous serez automatiquement notifiés une semaine avant l'expiration de la période de rétention de publicité,
+    et le jour de son expiration.
   </p>
 
   <p>
-    Once the privacy period ends, your request and following correspondence,
-    including <strong>your name</strong>, will be <strong>
-    <%= link_to 'displayed publicly',
-      help_privacy_path(anchor: 'public_request') %></strong> on this website.
+    Lorsque la période de secret se terminera, votre requête ainsi que la correspondance associée,
+    incluant <strong>votre nom</strong>, seront <strong>
+    <%= link_to 'rendus publics',
+      help_privacy_path(anchor: 'public_request') %></strong> sur ce site.
   </p>
 
   <h3 id="i-need-more-time-can-i-extend-a-privacy-period">
-    I need more time. Can I extend a privacy period?
+    J'ai besoin de plus de temps. Puis-je étendre la période de confidentialité?
    <a href="#i-need-more-time-can-i-extend-a-privacy-period">#</a>
   </h3>
 
   <p>
-    Privacy periods can be extended, but only in the week before the expiry
-    date.
+    Les périodes de confidentialité peuvent être étendues, mais seulement dans la semaine précédant la date d'expiration.
   </p>
 
   <p>
     <%= image_tag 'alaveteli-pro/screenshot-embargo-extension.jpg',
-                  alt: 'Extending a privacy period' %>
+                  alt: 'Etendre la période de confidentialité' %>
   </p>
 
   <p>
-    There is no limit to the number of times a privacy period may be extended,
-    but each extension requires manual confirmation.
+    Il n'existe pas de limites dans le nombre de fois où la période de confidentialité peut être étendue,
+    mais chaque extension requière une action manuelle de votre part.
   </p>
 
   <h3 id="how-do-i-publish-a-request">
-    How do I publish a request?
+    Comment je publie une requête?
    <a href="#how-do-i-publish-a-request">#</a>
   </h3>
 
   <p>
-    Requests can be published at any time.
+    Les requêtes peuvent être rendues publiques à n'importe quel moment.
   </p>
 
   <p>
     <%= image_tag 'alaveteli-pro/screenshot-embargo-publish.jpg',
-                  alt: 'Publish a request' %>
+                  alt: 'Publier une requête' %>
   </p>
 
   <h3 id="can-i-make-private-batch-requests">
-    Can I make private batch requests?
+    Puis-je faire des requêtes en masse confidentielles ?
    <a href="#can-i-make-private-batch-requests">#</a>
   </h3>
 
   <p>
-    Privacy periods can also be set on batch requests, and their operation
-    follows the same principles as individual requests. Changes to a privacy
-    period on one request belonging to a batch are mirrored to all requests in
-    the batch.
+    Des périodes de confidentialité peuvent aussi être définies pour les requêtes envoyées à plusieurs autorités publiques, et les modalités sont similaires à celles s'appliquant aux requêtes individuelles. Cependant, les changements effectués sur la visibilité d'une demande appartenant à une demande groupée s'appliquent à l'ensemble des demandes associées.
   </p>
 
   <h2 id="batch">
-    Batch
+    Demandes groupées
    <a href="#batch">#</a>
   </h2>
 
   <p>
-    Batch makes it easy to send and manage requests to multiple authorities.
+    Les demandes groupées simplifient l'envoi d'une même requête à plusieurs autorités publiques.
   </p>
 
   <h3 id="how-do-i-make-a-batch-request">
-    How do I make a batch request?
+    Comment faire une demande groupée?
    <a href="#how-do-i-make-a-batch-request">#</a>
   </h3>
 
   <p>
-    Batch allows you to select a list of authorities and write a template
-    request. The request gets sent individually to each authority like a mail
-    merge.
+    Cette fonctionnalité vous permet de selectionner une liste d'autorités à laquelle vous souhaitez adresser une même demande de communication. La requête est envoyée à chaque autorité commme lors de l'envoi d'un email en copie cachée à plusieurs destinataires.
   </p>
 
   <p>
     <%= image_tag 'alaveteli-pro/screenshot-batch-selection.jpg',
-                  alt: 'Select authorities for a batch' %>
+                  alt: 'Selectionner des autorités pour une demande groupée' %>
   </p>
 
   <p>
     <%= image_tag 'alaveteli-pro/screenshot-batch-write.jpg',
-                  alt: 'Write a batch template' %>
+                  alt: 'Ecrire un modèle de demande groupée' %>
   </p>
 
   <h3 id="how-do-i-manage-a-batch-request">
-    How do I manage a batch request?
+    Comment gérer les demandes groupées?
    <a href="#how-do-i-manage-a-batch-request">#</a>
   </h3>
 
   <p>
-    Progress of a batch can be managed with a convenient progress meter to see
-    how close you are to getting responses from all authorities and making it
-    easy to choose which action to take next.
+    L'avancement d'une demande groupée peut être géré à l'aide d'un tableau de bord de suivi vous permettant de visualiser le degré d'avancement de chaque demande individuelle ce qui vous permet facilement les actions requises pour faire avancer vos demandes.
   </p>
 
   <p>
     <%= image_tag 'alaveteli-pro/screenshot-batch-list.jpg',
-                  alt: 'Managing batch requests' %>
+                  alt: 'gérer les demandes groupées' %>
   </p>
 
   <h3 id="how-do-i-manage-batch-privacy-periods">
-    How do I manage batch privacy periods?
+    Comment gérer les périodes de confidentialité des demandes groupées ?
    <a href="#how-do-i-manage-batch-privacy-periods">#</a>
   </h3>
 
   <p>
-    Batches can be made private, and privacy periods easily managed across the
-    batch.
+    Les demandes groupées peuvent être rendues confidentielles, et les périodes de confidentialités peuvent être gérées à l'intérieur du groupe de demandes.
   </p>
 
   <p>
     <%= image_tag 'alaveteli-pro/screenshot-batch-privacy.jpg',
-                  alt: 'Manage batch privacy' %>
+                  alt: 'Gérer la confidentialité d'une demande groupée' %>
   </p>
 
   <h3 id="how-many-authorities-can-i-add-to-a-batch">
-    How many authorities can I add to a batch?
+    Combien d'autorités ouis-je ajouter à une demande groupée?
    <a href="#how-many-authorities-can-i-add-to-a-batch">#</a>
   </h3>
 
   <p>
-    The maximum number of authorities that can be added to a batch is
-    <%= AlaveteliConfiguration.pro_batch_authority_limit %>.
+    Le nombre maximal d'autorités publiques qui peuvent être associées à une demande groupée est de <%= AlaveteliConfiguration.pro_batch_authority_limit %>.
   </p>
 
   <h3 id="how-many-batch-requests-can-i-make">
-    How many batch requests can I make?
+    Combien de demandes groupées puis-je effectuer ?
    <a href="#how-many-batch-requests-can-i-make">#</a>
   </h3>
 
   <p>
-    We recommend sending a pilot batch to a sample of authorities to test the
-    request. Once you know the authorities hold the type of data that you’re
-    asking for you can then request from the remaining authorities.
+    Nous recommandons d'envoyer une première demande à un échantillon d'autorités publiques afin de tester ses modalités de réception. Une fois que vous avez pu confirmer que le type d'autorité saisie détenait bien les données ou documents recherchés vous pouvez élargir le périmètre des autorités saisies.
   </p>
 
   <p>
-    There’s no limit to the number of batches that can be sent, but Pro users
-    are required to abide by our guidelines about writing
-    <%= link_to 'responsible requests',
+    Il n'y a pas de limites au nombre de demandes groupées que vous pouvez effectuer, mais il est attendu que les utilisateur.rice.s de Madada ++ suivent les recommandations formulées en vue de favoriser la rédaction de
+    <%= link_to 'requêtes responsables',
       help_requesting_path(anchor: 'responsible') %>.
   </p>
 </div>
