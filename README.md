@@ -1,4 +1,10 @@
-# Thème DADA France
+# This repository is now archived, please use gitlab.com/madada-team/dada-france-theme instead
+
+# Ce dépôt est maintenant archivé, merci d'utiliser gitlab.com/madada-team/dada-france-theme
+
+
+
+## Thème DADA France
 
 Le thème et le contenu statique du site DADA.
 
