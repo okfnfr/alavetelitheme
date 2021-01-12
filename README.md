@@ -1,6 +1,6 @@
-# This repository is now archived, please use gitlab.com/madada-team/dada-france-theme instead
+# This repository is now archived, please use https://gitlab.com/madada-team/dada-france-theme instead
 
-# Ce dépôt est maintenant archivé, merci d'utiliser gitlab.com/madada-team/dada-france-theme
+# Ce dépôt est maintenant archivé, merci d'utiliser https://gitlab.com/madada-team/dada-france-theme
 
 
 
